@@ -1,0 +1,152 @@
+body {
+    overflow-x: hidden;
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Playfair Display", sans-serif;
+}
+
+li {
+    list-style: none;
+    color: rgb(80, 76, 76);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    min-height: 100vh;
+    background-image: url('./Assets/ferrari_fxx_k_4k-3840x2160.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 20% 100%, 0 85%);
+    animation: moveleft 2s ease;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+nav {
+    margin: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 2rem;
+}
+
+.nav-links li {
+    margin: 0.5rem;
+}
+
+.nav-links li:hover {
+    color: red;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo {
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+.description {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 60%;
+    padding: 4rem 6rem;
+    background: white;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    text-align: center;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 100% 100%);
+    animation: moveleft 0.8s ease;
+    position: absolute;
+    left: 40%;
+    top: -5%;
+}
+
+.read-more {
+    margin-top: 1rem;
+    color: #0d0d0d;
+    font-size: 1rem;
+    transition: all 0.7s ease;
+}
+
+.read-more:hover {
+    transform: translateY(-2px);
+}
+
+@keyframes moveleft {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+@media (max-width: 640px) {
+    .para{
+        display: none;
+    }
+    .title{
+        width: 100%;
+        position: relative;
+        right: 50%;
+    }
+
+    .nav-links{
+        color: rgb(80, 76, 76);
+    }
+
+}
+
+.title
+{
+    color:  rgb(80, 76, 76);
+    font-size: 2rem;
+    margin-left: 80%;
+}
+
+.text
+{
+    color: white;
+    font-size: 2rem;
+    margin-left: 30%;
+}
+
+.read-more{
+    color:  rgb(80, 76, 76);;
+}
+
+.read-more:hover{
+    color: red;
+}
